@@ -1,4 +1,4 @@
-# Python Cheatsheet
+# Python Cheatsheet [![My Skills](https://skillicons.dev/icons?i=py&theme=dark)](https://skillicons.dev)
 
 Welcome to the Python Cheatsheet repository! This repository serves as a comprehensive reference guide for Python, covering the core language features, syntax, standard libraries, and common programming patterns. Whether you're a beginner learning Python or an experienced developer seeking a quick reference, this cheatsheet is here to assist you.
 
