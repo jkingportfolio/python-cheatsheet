@@ -116,47 +116,49 @@ Setting up new projects within a folder called "Coding" on your desktop and usin
    ``` bash
    cd path\to\Desktop\Coding\ProjectA
    ```
-   3.3. Install virtualenv (if not already installed):
+   3.3. Create a virtual environment for your project:
 
    ``` bash
-   pip install virtualenv
+   python -m venv <name_of_virtual_environment>
    ```
-   3.4. Create a virtual environment for your project:
-
+   Common convention is to name your virtual environment .venv
    ``` bash
-   virtualenv venv
+   python -m venv .venv
    ```
-   3.5. Activate the virtual environment:
+   
+   3.4. Activate the virtual environment:
 
    On Windows:
    ``` bash 
-   venv\Scripts\activate
+   .venv\Scripts\activate
    ```
+   (NOTE: replace ".venv" with your virtual environments name if you have chosen something other than the common convention naming)
+   
    On macOS and Linux:
    
    ``` bash
-   source venv/bin/activate
+   source .venv/bin/activate
    ```
-   3.6. You'll notice that the command prompt changes, indicating that you're now within the virtual environment.
+   3.5. You'll notice that the command prompt changes, indicating that you're now within the virtual environment.
 
-   3.7. Install project-specific dependencies within this virtual environment using pip:
+   3.6. Install project-specific dependencies within this virtual environment using pip:
 
    ``` bash
    pip install package-name
    ```
-   3.8. To deactivate the virtual environment when you're done working on the project, simply enter:
+   3.7 To deactivate the virtual environment when you're done working on the project, simply enter:
    
    ``` bash
    deactivate
    ```
-6. Repeat for Each Project:
+7. Repeat for Each Project:
 
-   Repeat steps 3.2 to 3.8 for each new project you create within the "Coding" folder. Each project will have its own isolated environment and dependencies.
+   Repeat steps 3.2 to 3.7 for each new project you create within the "Coding" folder. Each project will have its own isolated environment and dependencies.
 
-7. Working with Projects:
+8. Working with Projects:
 
-   5.1. Whenever you want to work on a specific project, navigate to its folder and activate its virtual environment as shown in step 3.5.
+   8.1. Whenever you want to work on a specific project, navigate to its folder and activate its virtual environment as shown in step 3.4.
 
-   5.2. When you switch between projects, deactivate the current virtual environment (step 3.8) before activating the new one.
+   8.2. When you switch between projects, deactivate the current virtual environment (step 3.7) before activating the new one.
 
 By following these steps, you ensure that each project has its own isolated environment, preventing dependency clashes and making it easier to manage and collaborate on multiple projects within the "Coding" folder on your desktop.
