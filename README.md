@@ -644,6 +644,366 @@ The print() function is used to display the corresponding output.
 Conditional statements are essential for controlling the flow of your program based on different situations!
 
 
+# Control Flow Statements
+
+Control flow statements allow you to control the execution of your program by making decisions based on conditions and looping through code blocks.
+
+## IF Statement
+
+The `if` statement is used to execute a block of code only if a certain condition is true.
+
+```python
+age = 18
+
+if age >= 18:
+    print("You are an adult.")
+```
+
+### IF-ELSE Statement
+The if-else statement is used to execute one block of code if the condition is true and another block if it's false.
+
+``` python
+temperature = 25
+
+if temperature > 30:
+    print("It's hot outside.")
+else:
+    print("It's not too hot.")
+```
+### IF-ELIF-ELSE Statement
+The if-elif-else statement is used when you have multiple conditions to check.
+
+```python
+grade = 85
+
+if grade >= 90:
+    print("Excellent!")
+elif grade >= 70:
+    print("Good job.")
+else:
+    print("Keep working hard.")
+```
+### WHILE Loop
+The while loop is used to repeatedly execute a block of code as long as the condition is true.
+
+```python
+count = 0
+while count < 5:
+    print("Count:", count)
+    count += 1
+```
+### FOR Loop
+The for loop is used to iterate over a sequence (e.g., a list, tuple, or string) and execute a block of code for each item.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print("Fruit:", fruit)
+```
+### Example Code
+Here's an example that demonstrates the use of control flow statements in Python:
+
+```python
+# IF Statement
+x = 10
+if x > 5:
+    print("x is greater than 5")
+
+# IF-ELSE Statement
+y = 3
+if y % 2 == 0:
+    print("y is even")
+else:
+    print("y is odd")
+
+# IF-ELIF-ELSE Statement
+time = 18
+if time < 12:
+    print("Good morning!")
+elif time < 18:
+    print("Good afternoon!")
+else:
+    print("Good evening!")
+
+# WHILE Loop
+count = 0
+while count < 3:
+    print("Count:", count)
+    count += 1
+
+# FOR Loop
+for num in range(3):
+    print("Number:", num)
+```
+In the above code:
+
+Different control flow statements are demonstrated.
+The print() function is used to display the corresponding output.
+Control flow statements allow you to create dynamic and flexible programs that respond to various conditions and iterations!
+
+
+## Collections
+
+Collections in Python allow you to store multiple values in a single variable. There are several types of collections available.
+
+### Lists
+
+Lists are ordered and mutable collections that can hold different data types.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, "apple", True]
+```
+
+You can access elements in a list by their index, and you can modify, add, or remove elements.
+
+```python
+print(fruits[0])  # Outputs: "apple"
+fruits[1] = "orange"
+fruits.append("grape")
+fruits.remove("cherry")
+```
+### Tuples
+Tuples are ordered and immutable collections. Once created, you can't modify their content.
+
+```python
+coordinates = (3, 5)
+person = ("Alice", 30, "female")
+```
+Accessing elements in a tuple is similar to accessing elements in a list.
+
+```python
+print(person[0])  # Outputs: "Alice"
+```
+### Sets
+Sets are unordered collections that store unique values.
+
+```python
+colors = {"red", "green", "blue"}
+fruits = {"apple", "banana", "apple", "cherry"}  # Duplicates are ignored
+```
+You can perform various set operations like union, intersection, and difference.
+
+```python
+new_colors = {"yellow", "blue"}
+all_colors = colors.union(new_colors)
+```
+### Dictionaries
+Dictionaries are collections of key-value pairs. They are unordered and mutable.
+
+```python
+person = {
+    "name": "Alice",
+    "age": 30,
+    "gender": "female"
+}
+```
+You can access values using keys and update them.
+
+```python
+print(person["name"])  # Outputs: "Alice"
+person["age"] = 31
+```
+### Example Code
+Here's an example that demonstrates the use of various collection data types in Python:
+
+```python
+# Lists
+fruits = ["apple", "banana", "cherry"]
+print(fruits[1])
+
+# Tuples
+coordinates = (3, 5)
+print(coordinates[0])
+
+# Sets
+colors = {"red", "green", "blue"}
+print("green" in colors)
+
+# Dictionaries
+person = {"name": "Bob", "age": 25}
+print(person["age"])
+```
+In the above code:
+
+Different collection types are demonstrated with sample operations.
+The print() function is used to display the output.
+Collections provide efficient ways to store and manage multiple values in your Python programs!
+
+
+## Functions
+
+Functions are blocks of reusable code that can be called with different inputs to perform specific tasks. They help in organizing and modularizing code.
+
+### Defining Functions
+
+In Python, you define a function using the `def` keyword, followed by the function name and parentheses containing parameters. The code block indented under the function definition is the function's body.
+
+```python
+def greet(name):
+    print("Hello, " + name + "!")
+```
+
+### Calling Functions
+Once a function is defined, you can call it by using its name followed by parentheses, passing in the required arguments.
+
+```python
+greet("Alice")
+greet("Bob")
+```
+### Return Statement
+Functions can return values using the return statement. This allows you to capture and use the result of the function's computation.
+
+```python
+def add(x, y):
+    return x + y
+
+result = add(5, 3)
+print("Sum:", result)
+```
+### Default Arguments
+You can provide default values for function parameters. If a value is not provided when calling the function, the default value is used.
+
+```python
+def power(base, exponent=2):
+    return base ** exponent
+
+print(power(3))        # Outputs: 9
+print(power(2, 3))     # Outputs: 8
+```
+### Example Code
+Here's an example that demonstrates the use of functions in Python:
+
+```python
+# Defining a Function
+def square(x):
+    return x ** 2
+
+# Calling Functions
+result = square(4)
+print("Square:", result)
+
+# Using a Function with Default Argument
+def greet(name, greeting="Hello"):
+    print(greeting + ", " + name + "!")
+
+greet("Alice")
+greet("Bob", "Hi")
+```
+In the above code:
+
+A function is defined to calculate the square of a number.
+Functions are called with various arguments.
+A function with a default argument is demonstrated.
+Functions are essential for writing modular and organized code that can be reused across your program.
+
+
+## Lambda Functions
+
+Lambda functions, also known as anonymous functions, are small, unnamed functions that can have any number of arguments but only one expression. They are often used for short operations.
+
+### Syntax
+
+Lambda functions are defined using the `lambda` keyword, followed by the arguments and the expression. The result of the expression is automatically returned.
+
+```python
+# Syntax: lambda arguments: expression
+square = lambda x: x ** 2
+```
+
+### Using Lambda Functions
+Lambda functions can be assigned to variables and used just like regular functions.
+
+```python
+# Using the lambda function
+result = square(4)  # Outputs: 16
+```
+### Lambda with Other Functions
+Lambda functions are commonly used with other functions like map(), filter(), and sorted().
+
+```python
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+```
+### Example Code
+Here's an example that demonstrates the use of lambda functions in Python:
+
+```python
+# Defining a Lambda Function
+multiply = lambda x, y: x * y
+
+# Using the Lambda Function
+result = multiply(3, 5)
+print("Result:", result)
+
+# Using Lambda with map()
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+print("Squared Numbers:", squared_numbers)
+```
+In the above code:
+
+A lambda function is defined to multiply two numbers.
+The lambda function is used with the map() function to square numbers.
+Lambda functions are handy for writing short and concise operations in your code.
+
+
+## List Comprehensions
+
+List comprehensions provide a concise way to create lists by applying an expression to each item in an iterable (e.g., a list or range).
+
+### Syntax
+
+The basic syntax of a list comprehension is:
+
+new_list = [expression for item in iterable]
+
+## Using List Comprehensions
+
+List comprehensions are used to create new lists with transformed or filtered elements from an existing iterable.
+
+```python
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [x ** 2 for x in numbers]
+even_numbers = [x for x in numbers if x % 2 == 0]
+```
+### Nested List Comprehensions
+You can use nested list comprehensions to create lists of lists or apply multiple transformations.
+
+```python
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [x for row in matrix for x in row]
+```
+### Example Code
+Here's an example that demonstrates the use of list comprehensions in Python:
+
+```python
+# Using List Comprehensions
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [x ** 2 for x in numbers]
+even_numbers = [x for x in numbers if x % 2 == 0]
+
+print("Original Numbers:", numbers)
+print("Squared Numbers:", squared_numbers)
+print("Even Numbers:", even_numbers)
+
+# Nested List Comprehensions
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [x for row in matrix for x in row]
+print("Flattened Matrix:", flattened)
+```
+In the above code:
+
+List comprehensions are used to create new lists based on existing data.
+Nested list comprehensions are used to flatten a matrix.
+List comprehensions are a powerful way to simplify your code when working with iterables and creating new lists.
+
+
+
+
+
 
 
 
